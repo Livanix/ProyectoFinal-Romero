@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto Final</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white text-black">
+    <header class="flex items-center p-4">
+        <a href="index.html"><img src="img/e52532453c211f34b4b2d22b595e97fd.jpg" alt="Tilast logo" class="mr-4 h-11" /></a>
+        <div class="flex-grow relative">
+            <input type="text" placeholder="Search products" class="bg-orange-500 rounded-full pl-4 pr-10 py-2 w-full focus:outline-none focus:ring-2 focus:ring-orange-600" />
+            <ul id="search-suggestions" class="absolute top-full left-0 bg-white rounded-lg shadow-lg p-4 hidden w-full"></ul>
+            <span class="absolute top-1/2 right-3 transform -translate-y-1/2 text-white">
+              🔍
+            </span>
+            <div id="search-results"></div>
+          </div>
+        <div class="relative ml-4">
+            <button id="cart-button" class="text-white bg-orange-500 rounded-full p-1 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-600">
+                🛒
+            </button>
+            <span id="cart-count" class="absolute top-0 right-0 bg-red-500 text-white rounded-full w-5 h-5 text-xs flex items-center justify-center">0</span>
+          <div id="cart-dropdown" class="absolute right-0 top-full bg-white rounded-lg shadow-lg p-4 hidden w-96">
+            <h3 class="text-lg font-bold mb-4">Tus compras</h3>
+            <ul id="cart-items"></ul>
+            <div class="flex justify-between items-center mt-4">
+              <span>Total:</span>
+              <span id="cart-total">$0.00</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="p-4">
+        <section class="mb-8">
+          <div class="bg-gray-200 p-4 rounded-lg shadow-lg flex items-center space-x-4">
+            <img src="img/Diseño sin título.png" alt="Banner image" class="rounded-lg shadow-lg" />
+          </div>
+        </section>
+        <section class="mb-8">
+            <li class="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center bg-purple-500">
+            <h2 class="text-3xl font-bold mb-4 text-center">Productos Destacados</h2>
+            <ul id="featured-products" class="grid grid-cols-4 gap-4"></ul>
+            </li>
+          </section>
+          <section class="mb-8">
+            <h2 class="text-center text-xl font-bold mb-4">Todos los Productos</h2>
+            <div class="flex justify-center mb-4">
+              <label for="price-filter" class="mr-2">Filtro de Precio:</label>
+              <input type="range" id="price-filter" min="0" max="5000" step="100" value="5000" />
+              <span id="price-filter-value" class="ml-2"></span>
+            </div>
+            <ul id="all-products" class="grid grid-cols-4 gap-4"></ul>
+          </section>          
+      </main>
+      <footer class="bg-gray-800 text-white p-6">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+          <div class="text-center md:text-left mb-4 md:mb-0">
+            <h3 class="text-lg font-bold mb-2">e-commerce</h3>
+            <p>Proyecto Final</p>
+          </div>
+          <ul class="flex flex-col md:flex-row">
+            <li class="md:mr-6 mb-2 md:mb-0"><a href="#" class="hover:text-gray-300">Inicio</a></li>
+            <li class="md:mr-6 mb-2 md:mb-0"><a href="https://www.instagram.com/ivaaanz1/" target="_blank" class="hover:text-gray-300">Sobre mí</a></li>
+            <li class="md:mr-6 mb-2 md:mb-0"><a href="#" id="contact-link" class="hover:text-gray-300">Contacto</a></li>
+          </ul>
+        </div>
+      </footer>
+      
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
